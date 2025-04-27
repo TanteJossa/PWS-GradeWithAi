@@ -1,0 +1,23 @@
+{
+  "name": "pws-gradewithai-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo for PWS GradeWithAI project",
+  "workspaces": [
+    "frontend",
+    "backend/cloud_gpt",
+    "backend/doc_gen",
+    "backend/main"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "setup:backend": "powershell -ExecutionPolicy Bypass -File ./setup_backend.ps1",
+    "dev": "concurrently \"npm run dev --workspace=@pws-gradewithai/frontend\" \"cd backend/cloud_gpt && .\\env\\Scripts\\activate && .\\run_dev.bat\" \"cd backend/doc_gen && env\\Scripts\\activate && .\\run_dev.bat\" \"cd backend/main && .\\env\\Scripts\\activate && .\\run_dev.bat\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
