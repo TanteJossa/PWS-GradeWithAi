@@ -1,0 +1,42 @@
+# PWS-GradeWithAi
+
+This project appears to be a system for grading assignments using AI, likely involving image scanning, analysis with GPT models, and document generation.
+
+## Structure
+
+The project is organized into a frontend and several backend services within a monorepo structure:
+
+-   `frontend/`: Contains the Vue.js frontend application.
+-   `backend/`: Contains the Python-based backend services.
+    -   `cloud_gpt/`: Handles interactions with cloud-based GPT models (OpenAI, Gemini, Claude).
+    -   `doc_gen/`: Responsible for generating DOCX and PDF documents.
+    -   `main/`: The core backend service, likely managing image processing (YOLOv5) and application logic.
+
+## Getting Started
+
+1.  **Install Dependencies:**
+    ```bash
+    npm run install:all
+    ```
+    This command installs dependencies for all workspaces (frontend and backend services).
+
+2.  **Setup Backend:**
+    ```powershell
+    powershell -ExecutionPolicy Bypass -File ./setup_backend.ps1
+    ```
+    This script likely sets up Python virtual environments and installs Python dependencies for the backend services. Ensure you have Python installed.
+
+3.  **Run Development Servers:**
+    ```bash
+    npm run dev
+    ```
+    This command uses `concurrently` to start the frontend development server and all backend services simultaneously.
+
+## Demo
+
+A live demo of the application is available at: [toetspws.web.app](https://toetspws.web.app/)
+
+You can also view a video demonstration here: [Google Drive Video](https://drive.google.com/file/d/1QoPI6qoeRTFzXhWm8qH2aGJ8g6kPhtjW/view)
+## License
+
+This project includes a LICENSE file. Please refer to it for licensing details.
