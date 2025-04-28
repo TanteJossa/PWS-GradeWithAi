@@ -1,7 +1,5 @@
 # PWS-GradeWithAi
 
-This project appears to be a system for grading assignments using AI, likely involving image scanning, analysis with GPT models, and document generation.
-
 ## Structure
 
 The project is organized into a frontend and several backend services within a monorepo structure:
