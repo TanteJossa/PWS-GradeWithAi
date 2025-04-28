@@ -32,6 +32,13 @@ The project is organized into a frontend and several backend services within a m
     ```
     This command uses `concurrently` to start the frontend development server and all backend services simultaneously.
 
+4.  **Setup Firebase:**
+    *   Create a Firebase project at [https://console.firebase.google.com/](https://console.firebase.google.com/).
+    *   Enable the services you need (e.g., Hosting, Firestore Database, Authentication).
+    *   Obtain your Firebase project configuration (apiKey, authDomain, projectId, etc.).
+    *   Update the Firebase configuration in `frontend/src/firebase.js` with your project's credentials. `frontennd/src/firebaseConfig.js`
+    *   If deploying, ensure `frontend/firebase.json` and `frontend/.firebaserc` are configured correctly for your Firebase project. You might need to log in using the Firebase CLI (`firebase login`).
+
 ## Demo
 
 A live demo of the application is available at: [toetspws.web.app](https://toetspws.web.app/)
